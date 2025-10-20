@@ -1,6 +1,6 @@
-\\202510302201
-\\2151641135@qq.com
-\\刘金富
+//202510302201
+//2151641135@qq.com
+//刘金富
 #include <stdio.h>
 int main() {
     float celsius,fahrenheit;
