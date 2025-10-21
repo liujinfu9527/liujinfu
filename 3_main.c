@@ -10,8 +10,5 @@ int main() {
     printf("b=%f\n",b);
     printf("a+b=%f\n",c);
     return 0;
-
-
-
 }
  
