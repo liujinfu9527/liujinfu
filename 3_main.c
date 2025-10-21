@@ -4,11 +4,9 @@
 #include <stdio.h>
 int main() {
     float a,b,c;
-    scanf("%f,%f",&a,&b);
+    scanf("%f %f",&a,&b);
     c=a+b;
-    printf("a=%f\n",a);
-    printf("b=%f\n",b);
-    printf("a+b=%f\n",c);
+    printf("%f + %f = %f\n",a,b,c);
     return 0;
 }
  
