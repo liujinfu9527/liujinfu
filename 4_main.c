@@ -2,25 +2,27 @@
 //2151641135@qq.com
 //刘金富
 #include <stdio.h>
-int main () 
+int main() 
 {
-    int first =1 ;
-    for (int i = 100; i<= 999; i++) 
+    int num = 100;
+    int first = 1;
+    while (num <= 999) 
 {
-    int a=i / 100;
-    int b=(i /10) % 10;
-    int c=i % 10;
-    if (a*a*a + b*b*b + c*c*c == i)
+    int a = num / 100;
+    int b = (num / 10) % 10;
+    int c = num % 10;
+    if (a * a * a + b * b * b + c * c * c == num) 
 {
-    if (first){
-    printf("%d", i);
-    first =0;
+    if (first) 
+{
+    printf("%d", num);
+    first = 0;
+}   else 
+{
+    printf(" %d", num);
 }
-    else
-{
-    printf(" %d", i);
 }
-}
+    num++;
 }
     return 0;
 }
