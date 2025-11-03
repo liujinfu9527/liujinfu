@@ -2,27 +2,18 @@
 //2151641135@qq.com
 //刘金富
 #include <stdio.h>
-int main() 
+int one(int a,int b)
 {
-    int num = 100;
-    int first = 1;
-    while (num <= 999) 
+int result = 1;
+    for (int i = 0;i<b;i++)
 {
-    int a = num / 100;
-    int b = (num / 10) % 10;
-    int c = num % 10;
-    if (a * a * a + b * b * b + c * c * c == num) 
-{
-    if (first) 
-{
-    printf("%d", num);
-    first = 0;
-}   else 
-{
-    printf(" %d", num);
+    result*= a;
 }
+    return result;
 }
-    num++;
-}
+int main()
+{
+int answer = one(1,2) + one(2,2) + one(3,2) + one(4,2) + one(5,2);
+    printf ("%d",answer);
     return 0;
 }
