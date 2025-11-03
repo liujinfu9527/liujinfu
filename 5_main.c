@@ -1,27 +1,17 @@
 //202510302201
 //2151641135@qq.com
 //刘金富
-#include <stdio.h>
-int main () 
+include <stdio.h>
+int one(int a1 ,int an,int step)
 {
-    int arr [5];
-    for(int i = 0; i <4; i++)
+    int result = 1;
+    int n = (an-a1)/step+1;
+    result = (a1+an)*n/2;
+    return result;
+}
+int main ()
 {
-    scanf("%d", &arr[i]);
-}
-    arr[4] = 0;
-    for (int i = 0; i < 4; i++) 
-{
-    arr[4] = arr[0] + arr[1] + arr[2] + arr[3];
-}
-    for (int i = 0; i < 5; i++) 
-{
-    printf ("%d ", arr[i]);
-        if(i < 4){
-    printf ("");
-}
-}
+int answer = one ( 1 , 100,1);
+    printf("%d",answer);
     return 0;
-
 }
-
