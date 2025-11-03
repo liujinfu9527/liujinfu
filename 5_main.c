@@ -5,8 +5,8 @@ include <stdio.h>
 int one(int a1 ,int an,int step)
 {
     int result = 1;
-    int n = (an-a1)/step+1;
-    result = (a1+an)*n/2;
+    int n = (an-a1) / step + 1;
+    result = (a1+an) * n / 2;
     return result;
 }
 int main ()
