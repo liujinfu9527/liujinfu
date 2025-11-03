@@ -2,25 +2,20 @@
 //2151641135@qq.com
 //刘金富
 #include <stdio.h>
-int main () 
+int main ()
 {
-    int first =1 ;
-    for (int i = 100; i<= 999; i++) 
+int arr[3][3];
+int i;
+int j;
+    for (i=0;i<3;i++)
 {
-    int a=i / 100;
-    int b=(i /10) % 10;
-    int c=i % 10;
-    if (a*a*a + b*b*b + c*c*c == i)
-{
-    if (first)
-{
-    printf("%d", i);
-    first =0;
-}      else
-{
-    printf(" %d", i);
+    scanf ("%d %d %d",&arr[i][0],&arr[i][1],&arr[i][2]);
 }
+    for (i=0;i<3;i++){
+    for (j=0;j<3;j++){
+    printf ("%d ",arr[j][i]);
 }
+    printf ("\n");
 }
     return 0;
 }
