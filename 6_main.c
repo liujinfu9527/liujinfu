@@ -2,28 +2,34 @@
 //2151641135@qq.com
 //刘金富
 #include <stdio.h>
-int main () 
+int one(int arr[],int length)
 {
-    int arr[5];
-    int i=0;
-    while (i<5)
+int result = 0;
+    for(int i=0;i<length;i++)
 {
-    int num;
-    scanf("%d", &num);
-    if (num%2==0)
-{
-    arr[i]=num;
-    i++;
+    result+= arr[i];}
+    return result;
 }
-}
-    i=0;
-    while (i<5)
+int two(int arr[],int length)
 {
-    if (i== 4)
-    printf("%d", arr[i]);
-    else
-    printf("%d ", arr[i]);
-    i++;
+int answer = 1;
+    for(int i = 0;i<length;i++)
+{
+    answer*= arr[i];
 }
+    return answer;
+}
+int main()
+{
+int arr[5];
+    for(int i = 0;i<5;i++)
+{
+    scanf("%d",&arr[i]);
+}
+int result = one(arr,5);
+int answer = two(arr,5);
+    printf ("%d %d\n",result,answer);
     return 0;
+
+
 }
