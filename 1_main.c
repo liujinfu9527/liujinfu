@@ -4,7 +4,7 @@
 #include <stdio.h>
 int main (){
 int arr[3][3];
-int i，j;
+int i,j;
 for (i=0;i<3;i++)
 {
 scanf ("%d %d %d",&arr[i][0],&arr[i][1],&arr[i][2]);
