@@ -2,28 +2,36 @@
 //2151641135@qq.com
 //刘金富
 #include <stdio.h>
+int one(int arr[],int length){
+    for (int i=0, j=length - 1;i<j;i++,j--)
+{
+    arr[i]=arr[i]+arr[j];
+    arr[j]=arr[i]-arr[j];
+    arr[i]=arr[i]-arr[j];
+}
+    
+}
 int main ()
 {
-    int arr[5];
-    int i = 1;
-    scanf("%d%d%d%d",&arr[1], &arr[2], &arr[3], &arr[4]);
-    arr[0]=0;
-    i=0;
-    while (i<5)
+int arr[5];
+    for (int i=0;i<5;i++)
 {
-    if (i== 4)
+    scanf ("%d",&arr[i]);
+}
+    one(arr,5);
+    for(int i=0;i<5;i++)
 {
-    printf("%d", arr[i]);
-}   else
+    if(i==4)
 {
-        printf("%d ", arr[i]);
-} 
-    i++;
+        printf("%d",arr[i]);
+}
+    else
+{
+        printf("%d ",arr[i]);
+}
 }
     return 0;
 }
-
-
 
 
 
