@@ -11,9 +11,12 @@ int j;
 {
     scanf ("%d %d %d",&arr[i][0],&arr[i][1],&arr[i][2]);
 }
-    for (i=0;i<3;i++){
-    for (j=0;j<3;j++){
-    printf ("%d ",arr[j][i]);
+    for (i=0;i<3;i++)
+{
+    for (j=0;j<3;j++)
+{
+    printf ("%d",arr[j][i]);
+    if(j < 2) printf (" ");
 }
     printf ("\n");
 }
