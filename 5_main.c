@@ -11,7 +11,7 @@ int one(int a1 ,int an,int step)
 }
 int main ()
 {
-int answer = one ( 1 , 100,1);
+int answer = one (1,100,1);
     printf("%d",answer);
     return 0;
 }
