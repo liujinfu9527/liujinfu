@@ -2,40 +2,29 @@
 //2151641135@qq.com
 //刘金富
 #include <stdio.h>
-int main () 
+int main ()
 {
-    int n;
-    scanf("%d", &n);
-    int is_prime = 1;
-    if(n ==1)
+int arr[10];
+int i,j;
+    for (i = 0;i < 10;i++)
 {
-    is_prime = 0;
+    scanf ("%d",&arr[i]);
 }
-    else
+    for (i = 0;i < 9;i++)
 {
-    int i = 2;
-    while(i * i <= n)
+    for (j = 0;j < 9;j++)
 {
-    if(n % i == 0)
+    if (arr[j] > arr[j+1])
 {
-    is_prime = 0;
-    break;
-}
-            i++;
+    arr[j] = arr[j] + arr[j+1];
+    arr[j+1] = arr[j] - arr[j+1];
+    arr[j] = arr[j] - arr[j+1];
 }
 }
-    if(is_prime)
-{
-    printf("密钥安全，密码设置成功\n");
 }
-    else
+    for(i = 0;i < 10;i++)
 {
-    printf("密钥不安全，请重新输入\n");
+    printf("%d ",arr[i]);
 }
     return 0;
-
-
-
-
-
 }
