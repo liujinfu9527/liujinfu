@@ -1,7 +1,7 @@
 //202510302201
 //2151641135@qq.com
 //刘金富
-include <stdio.h>
+#include <stdio.h>
 int one(int a1 ,int an,int step)
 {
     int result = 1;
