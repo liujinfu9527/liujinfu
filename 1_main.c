@@ -5,7 +5,7 @@
 int main ()
 {
     int a;
-    scanf ("%d",a);
+    scanf ("%d",&a);
     int *ptr = &a;
     *ptr += 10;
     printf ("%d,%d" ,a,*ptr);
