@@ -2,38 +2,27 @@
 //2151641135@qq.com
 //刘金富
 #include <stdio.h>
-int one(int arr[],int length){
-    for (int i=0, j=length - 1;i<j;i++,j--)
-{
-    arr[i]=arr[i]+arr[j];
-    arr[j]=arr[i]-arr[j];
-    arr[i]=arr[i]-arr[j];
-}
-    
-}
 int main ()
 {
-int arr[5];
-    for (int i=0;i<5;i++)
+int arr[10];
+    for (int i = 0; i < 10; i ++)
 {
-    scanf ("%d",&arr[i]);
+    scanf ("%d",arr + i);
 }
-    one(arr,5);
-    for(int i=0;i<5;i++)
+    for (int i = 0; i<9; i ++){
+    for (int j = 0; j < 9 - i; j ++)
 {
-    if(i==4)
+    if (*(arr + j) > *(arr + j + 1))
 {
-        printf("%d",arr[i]);
+    int temp = *(arr + j);
+    *(arr + j) = *(arr + j + 1);
+    *(arr + j + 1) = temp;
 }
-    else
-{
-        printf("%d ",arr[i]);
 }
+}
+    for (int i = 0; i < 10; i ++)
+{
+    printf ("%d ",*(arr + i));
 }
     return 0;
 }
-
-
-
-
-
