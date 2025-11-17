@@ -14,7 +14,7 @@ int main ()
 {
     int arr[5];
     int length = sizeof(arr)/sizeof(arr[0]);
-    for (int i = 0; i < length; i ++）
+    for (int i = 0; i < length; i ++)
 {
         scanf ("%d",&arr[i]);
 }
