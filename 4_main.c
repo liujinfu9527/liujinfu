@@ -2,18 +2,26 @@
 //2151641135@qq.com
 //刘金富
 #include <stdio.h>
-int one(int a,int b)
+void one (int *arr ,int length)
 {
-int result = 1;
-    for (int i = 0;i<b;i++)
+    for (int i = 0; i <length; i ++)
 {
-    result*= a;
+        arr[i] += 1;
+
 }
-    return result;
 }
-int main()
+int main ()
 {
-int answer = one(1,2) + one(2,2) + one(3,2) + one(4,2) + one(5,2);
-    printf ("%d",answer);
+    int arr[5];
+    int length = sizeof(arr)/sizeof(arr[0]);
+    for (int i = 0; i < length; i ++）
+{
+        scanf ("%d",&arr[i]);
+}
+    one (arr,length);
+    for (int i = 0; i < 5; i ++)
+{
+        printf ("%d ",arr[i]);
+}
     return 0;
 }
