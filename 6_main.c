@@ -2,34 +2,19 @@
 //2151641135@qq.com
 //刘金富
 #include <stdio.h>
-int one(int arr[],int length)
-{
-int result = 0;
-    for(int i=0;i<length;i++)
-{
-    result+= arr[i];}
-    return result;
-}
-int two(int arr[],int length)
-{
-int answer = 1;
-    for(int i = 0;i<length;i++)
-{
-    answer*= arr[i];
-}
-    return answer;
-}
+#include <stdlib.h>
 int main()
 {
-int arr[5];
-    for(int i = 0;i<5;i++)
+   int *ptr = (int *)malloc(5 * sizeof(int));
+   for(int i = 0; i < 5; i++)
 {
-    scanf("%d",&arr[i]);
+       scanf("%d", ptr + i);
 }
-int result = one(arr,5);
-int answer = two(arr,5);
-    printf ("%d %d\n",result,answer);
+
+   for (int i = 0; i< 5; i++)
+{
+    printf ("%d ", *(ptr + i));
+}
+    free(ptr);
     return 0;
-
-
-}
+} 
