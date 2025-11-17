@@ -4,21 +4,19 @@
 #include <stdio.h>
 int main ()
 {
-int arr[3][3];
-int i;
-int j;
-    for (i=0;i<3;i++)
+    int arr[] = {1,2,3,4,5};
+    int *ptr = arr;
+    for( int i = 0; i < 5; i++)
 {
-    scanf ("%d %d %d",&arr[i][0],&arr[i][1],&arr[i][2]);
+        scanf ("%d",ptr + i);
 }
-    for (i=0;i<3;i++)
+    for(int i = 0; i < 5; i++)
 {
-    for (j=0;j<3;j++)
-{
-    printf ("%d",arr[j][i]);
-    if(j < 2) printf (" ");
+      *(ptr + i) *= 2;
 }
-    printf ("\n");
+    for(int i = 0; i < 5; i++)
+{
+    printf ("%d ",*(ptr + i));
 }
     return 0;
 }
