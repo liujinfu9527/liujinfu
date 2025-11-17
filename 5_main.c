@@ -2,16 +2,28 @@
 //2151641135@qq.com
 //刘金富
 #include <stdio.h>
-int one(int a1 ,int an,int step)
+void one (int *ptr_arr, int length)
 {
-    int result = 1;
-    int n = (an-a1) / step + 1;
-    result = (a1+an) * n / 2;
-    return result;
+    for (int i = length - 1; i > 0; i --)
+{
+    *(ptr_arr+i) = *(ptr_arr +i - 1);
 }
-int main ()
+
+    ptr_arr[0] = 0;
+        
+}
+    int main ()
 {
-int answer = one (1,100,1);
-    printf("%d",answer);
+    int arr[5];
+    int length = 5;
+    for (int i = 0; i < length; i ++)
+{
+    scanf ("%d",&arr[i]);
+}
+    one (arr,length);
+    for (int i = 0; i < length; i ++)
+{
+    printf ("%d ",arr[i]);
+}
     return 0;
 }
